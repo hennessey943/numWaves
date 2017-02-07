@@ -1,0 +1,11 @@
+  N = 40;
+  M = 40;
+  xa = 0;
+  xb = pi;
+  ya = 0;
+  yb = pi;
+  c = 1;
+  tf = 1;
+  iPlot=0;
+  iOrder=4;
+  [err,dx,dy]=waveD2wO4(M,N,xa,xb,ya,yb,c,tf,iPlot,iOrder);

@@ -1,0 +1,21 @@
+\beamer@endinputifotherversion {3.36pt}
+\beamer@sectionintoc {1}{Preliminaries}{3}{0}{1}
+\beamer@subsectionintoc {1}{1}{Motivation}{3}{0}{1}
+\beamer@subsectionintoc {1}{2}{Model Problems}{5}{0}{1}
+\beamer@sectionintoc {2}{Solution Methods}{6}{0}{2}
+\beamer@subsectionintoc {2}{1}{Riemann Problems}{6}{0}{2}
+\beamer@subsectionintoc {2}{2}{Exact Riemann Solution}{7}{0}{2}
+\beamer@subsectionintoc {2}{3}{HLLC Riemann Solution}{9}{0}{2}
+\beamer@subsectionintoc {2}{4}{A Comparison of the Exact and HLLC Solvers}{10}{0}{2}
+\beamer@sectionintoc {3}{The Numerical Method}{16}{0}{3}
+\beamer@subsectionintoc {3}{1}{Discretization}{16}{0}{3}
+\beamer@subsectionintoc {3}{2}{Boundary Conditions}{17}{0}{3}
+\beamer@subsectionintoc {3}{3}{Time-Step Restriction}{18}{0}{3}
+\beamer@subsectionintoc {3}{4}{Numerical Convergence Results}{20}{0}{3}
+\beamer@subsectionintoc {3}{5}{Simulation Results}{21}{0}{3}
+\beamer@sectionintoc {4}{Non-Cartesian Domains}{22}{0}{4}
+\beamer@subsectionintoc {4}{1}{Transformed Equations}{23}{0}{4}
+\beamer@subsectionintoc {4}{2}{Numerical Method}{24}{0}{4}
+\beamer@sectionintoc {5}{Finite Volume - Non-Cartesian Domains}{26}{0}{5}
+\beamer@subsectionintoc {5}{1}{Transformed Equations}{26}{0}{5}
+\beamer@subsectionintoc {5}{2}{Numerical Methods}{28}{0}{5}

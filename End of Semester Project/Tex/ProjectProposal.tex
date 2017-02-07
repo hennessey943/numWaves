@@ -1,0 +1,22 @@
+\input{def}
+\begin{document}
+\begin{center}
+\large{MATH -6890 \hspace{1in} Numerical Solutions of Waves \hspace{1in}Fall 2016.}\end{center}
+Michael Hennessey
+\bigskip
+\bc{\bf Semester Project Proposal}\ec
+
+A conservation law is a mathematization of physical principles, but it is often applied only to very idealized problems. One of the most frequent idealizations is to use a rectangular domain. My goal is to create a high-order conservative numerical solver for the Euler equations that does not require such an idealization. \par
+
+ My approach to creating such a solver is to take a given curvilinear domain such as a circle, or annulus and define some smooth mapping from parameter space on the unit square to the physical domain. The initial conditions will be mapped onto parameter space using the appropriate transformation of the governing equations, then these transformed equations will be solved in parameter space using a finite-volume, high order WENO scheme. Finally, the data will then be mapped back onto physical space. Ideally, each of these steps will be automated, and coded up in FORTRAN.\par
+
+ This project will pave the way for a high-order accurate 3-dimensional conservation law solver and a much better understanding of how the physical substance modeled by the conservation law evolves in space under deformations like rarefactions, shocks, or contact discontinuities. This project will also lay an important foundation in dealing with multi-grid methods and coding conservation laws in FORTRAN.\par
+
+Of course a simple competing method would just be to take some initial grid function with compact support and surround the curvilinear grid with a rectangular grid. Then, if we solve the Euler equations on the rectangular grid, being careful not to advance any important data outside of the original domain the solution might be considered accurate enough to not need a curvilinear solver. However, this method is far from generalizable to 3-space, nor does it present the ability to deal with interesting physical boundary conditions. \par
+
+ As far as creating the curvilinear coordinate solver, I will be referencing the 2008 paper by Henshaw and Schwendeman `An adaptive numerical scheme for high-speed reactive flow on overlapping grids.' Some preliminary research has led me to a 2011 paper by Zhang, Zhang, and Shu out of Brown University titled `On the Order of Accuracy and Numerical Performance of Two Classes of Finite Volume WENO Schemes' as a resource for defining my WENO scheme. For solving the 2-D Euler equations, I will also be referencing Toro's book `Riemann Solvers and Numerical Methods for Fluid Dynamic'.\par
+
+The first thing I will need to do is extand an extant 1-D exact Riemann solver for the Euler equations into  a 2-D solver given general initial Riemann data. The next step will be to create a 2-D conservation law solver where the architechture will be based on some previous 1-D conservation law solvers. I will then write a transformation program to take given curvilinear domains, initial conditions and boundary conditions (if possible) into parameter space. Next, the transformation program will need to be able to undo its transformation on data returned by the conservation law solver. Lastly, I will extend the conservation law solver's schemes to include a high-order WENO scheme.
+\par
+ I am not confident that I will be able to transform the initial domain, data, and boundary conditions all at once to allow some general solver to return accurate data. Instead, I think it may work better if the data is transformed in between each time-step and then applying the boundary conditions when in physical space rather than parameter space. This will allow the conservation law solver to be more general, and perhaps easier to implement.
+ \end{document}
